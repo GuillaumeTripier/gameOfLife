@@ -2,7 +2,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.util.Arrays;
 
-public class JeuDeLaVieIhm extends JFrame {
+public class JeuDeLaVieIhm extends JFrame{
 
     private static final int TAILLE_PLATEAU = 70;
     private static final float TAILLE_POLICE = 10f;
@@ -13,13 +13,9 @@ public class JeuDeLaVieIhm extends JFrame {
     private boolean[][] etat = plateauInitial();
 
     private boolean[][] plateauInitial() {
-        boolean[][] booleans = new boolean[TAILLE_PLATEAU][TAILLE_PLATEAU];
-        for (int ligne = 0; ligne < TAILLE_PLATEAU; ligne++) {
-            for (int colonne = 0; colonne < TAILLE_PLATEAU; colonne++) {
-                booleans[ligne][colonne] = Math.random() > 0.8;
-            }
-        }
-        return booleans;
+        RandomInit randomInit = new RandomInit();
+        boolean[][] plateau = randomInit.initPlateau(TAILLE_PLATEAU);
+        return plateau;
     }
 
     public static void main(String[] args) {
