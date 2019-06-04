@@ -18,10 +18,10 @@ public class JeuDeLaVieIhm extends JFrame{
 
 
 
-        //RandomInit initClass = new RandomInit();
-        StaticInit initClass = new StaticInit("test");
+        //InitInterface initClass = new RandomInit();
+        InitInterface initClass = new StaticInit("test");
 
-        
+
         boolean[][] plateau = initClass.initPlateau(TAILLE_PLATEAU);
         return plateau;
     }
