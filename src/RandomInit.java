@@ -1,5 +1,5 @@
 public class RandomInit implements InitInterface {
-    public void RandomInit(){
+    public RandomInit(){
 
     }
 

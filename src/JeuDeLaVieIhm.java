@@ -13,8 +13,11 @@ public class JeuDeLaVieIhm extends JFrame{
     private boolean[][] etat = plateauInitial();
 
     private boolean[][] plateauInitial() {
-        RandomInit randomInit = new RandomInit();
-        boolean[][] plateau = randomInit.initPlateau(TAILLE_PLATEAU);
+        //RandomInit initClass = new RandomInit();
+        StaticInit initClass = new StaticInit("test");
+        //initClass.initFile(TAILLE_PLATEAU);
+
+        boolean[][] plateau = initClass.initPlateau(TAILLE_PLATEAU);
         return plateau;
     }
 
